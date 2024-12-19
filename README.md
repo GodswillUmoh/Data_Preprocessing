@@ -52,3 +52,21 @@ print(X)
 + Class is like set of instructions to follow in order to build an object
 + Object is the instance of the class. The result of excecuting the instructions( class) is the object
 + Method is the tool or function used on object. Performing a particular task in objects.
+
+## Handling missing data
++ for large dataset, you may choose to remove the entire row.
++ However, it might not be the best to remove rows because it can affect the quality of the data
++ Use the mean value to replace the missing (nan)
++ To do this we can use the scikit learn library with the SimpleImputer
+```python
+# Taking care of missing data
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values= pd.NA, strategy='mean')
+imputer.fit(X[:, 1:3])
+# the transform helps populate the table. In other not to affect entire table
+# we update with using exactly the index specified
+X[:, 1:3] = imputer.transform(X[:, 1:3])
+
+print(X)
+
+```
