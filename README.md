@@ -75,6 +75,13 @@ print(X)
 ```
 ## Working with Categorical Data
 > Categorical data refers to data that represents categories or groups. It consists of labels or names that describe distinct and non-overlapping groups or classes, rather than numerical values that have inherent mathematical meaning. Categorical data is typically used to represent qualitative characteristics or attributes. Examples: Gender (Male, Female), Colors (Red, Blue, Green), Countries (USA, Canada, India). Answers (Yes, No)
-> 
+
 > Key Characteristics of Categorical Data:
 Data values are often non-numeric but can be represented numerically (e.g., 0 for Male, 1 for Female).
+
+## Handling Categorical data
++ Considering the dataset above, we have three categories under country.
++ One can use One-Hot-Encoding to assign these into three columns
++ One-Hot-Encoding introducess a binary vector to each of the countries
++ Example of binary code: say Poland is given 100, Germany 010, USA 001.
+
