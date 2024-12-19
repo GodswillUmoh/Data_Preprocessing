@@ -59,6 +59,7 @@ print(X)
 + Use the mean value to replace the missing (nan)
 + To do this we can use the scikit learn library with the SimpleImputer class
 +  Use the `transform` method of the `SimpleImputer` class to replace missing data in the specified numerical columns.
++  You can Update the matrix of features by assigning the result of the `transform` method to the correct columns e.g X[:, 1:3].
   
 ```python
 # Taking care of missing data
