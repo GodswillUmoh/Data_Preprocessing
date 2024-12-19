@@ -6,7 +6,7 @@
 ## Dataset
 In this data preprocessing, I created a simple data. _Note: Data is created for learning purposes and not necessarily a fact_
 |Country | Age |Salary |	Purchased|
-| ------|------|-------|-----------|
+|-------|------|-------|-----------|
 |Poland	|54	|82000	| No |
 |Germany|	37	|58000	|Yes|
 |United States|	40	|64000|	No|
