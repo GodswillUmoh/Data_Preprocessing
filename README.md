@@ -58,6 +58,8 @@ print(X)
 + However, it might not be the best to remove rows because it can affect the quality of the data
 + Use the mean value to replace the missing (nan)
 + To do this we can use the scikit learn library with the SimpleImputer class
++  Use the `transform` method of the `SimpleImputer` class to replace missing data in the specified numerical columns.
+  
 ```python
 # Taking care of missing data
 from sklearn.impute import SimpleImputer
