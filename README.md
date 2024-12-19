@@ -79,11 +79,11 @@ print(X)
 > Key Characteristics of Categorical Data:
 Data values are often non-numeric but can be represented numerically (e.g., 0 for Male, 1 for Female).
 
-## Handling Categorical data
+## Handling Categorical data 
 + Considering the dataset above, we have three categories under country.
 + One can use One-Hot-Encoding to assign these into three columns
 + One-Hot-Encoding introducess a binary vector to each of the countries
-+ Example of binary code: say Poland is given __vector (1.0, 0.0, 00), Germany vector(0.0, 1.0, 0.0) USA vector (0.o, 0.0, 1.0).__
++ Example of binary code: say Poland is given __vector (1.0, 0.0, 00), Germany vector(0.0, 1.0, 0.0) USA vector (0.0, 0.0, 1.0).__
 
 ### Encoding the Independent Variable
 ```python
@@ -101,4 +101,16 @@ X = np.array(ct.fit_transform(X))
 
 print(X)
 ```
+ [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
+ 
+### Encoding the dependent Variable
+```python
+# Encoding
+# Encoding the dependent variable into 0 and 1, we use LabelEncoder
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+y = le.fit_transform(y)
 
+print(y)
+```
+ [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
