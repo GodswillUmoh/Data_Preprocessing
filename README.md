@@ -53,7 +53,7 @@ print(X)
 + Object is the instance of the class. The result of excecuting the instructions( class) is the object
 + Method is the tool or function used on object. Performing a particular task in objects.
 
-## Handling missing data
+## Handling missing data [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
 + for large dataset, you may choose to remove the entire row.
 + However, it might not be the best to remove rows because it can affect the quality of the data
 + Use the mean value to replace the missing (nan)
