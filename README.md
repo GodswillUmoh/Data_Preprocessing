@@ -85,3 +85,20 @@ Data values are often non-numeric but can be represented numerically (e.g., 0 fo
 + One-Hot-Encoding introducess a binary vector to each of the countries
 + Example of binary code: say Poland is given 100, Germany 010, USA 001.
 
+### Encoding the Independent Variable
+```python
+# Encoding
+from sklearn.compose import ColumnTransformer
+#from sklearn.preprocessing import OneHotEncoding
+from sklearn.preprocessing import OneHotEncoder
+# the transformer takes three items eo-column index, enconder, OneHotEncoder, 
+# remainder(helps not to apply to other columns)
+ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder = 'passthrough')
+ct.fit_transform(X)
+
+#convert to array
+X = np.array(ct.fit_transform(X))
+
+print(X)
+```
+
