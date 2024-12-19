@@ -47,6 +47,8 @@ print(X)
 #print(y)
 ```
 > ## Notes
+> The .values attribute helps to extract the data as numpy arrays.
+> : is range, [:-1] for columns will exclude the last column since range does not include last values.
 + Class is like set of instructions to follow in order to build an object
 + Object is the instance of the class. The result of excecuting the instructions( class) is the object
 + Method is the tool or function used on object. Performing a particular task in objects.
