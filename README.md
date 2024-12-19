@@ -73,3 +73,8 @@ X[:, 1:3] = imputer.transform(X[:, 1:3])
 print(X)
 
 ```
+## Working with Categorical Data
+> Categorical data refers to data that represents categories or groups. It consists of labels or names that describe distinct and non-overlapping groups or classes, rather than numerical values that have inherent mathematical meaning. Categorical data is typically used to represent qualitative characteristics or attributes. Examples: Gender (Male, Female), Colors (Red, Blue, Green), Countries (USA, Canada, India). Answers (Yes, No)
+> 
+> Key Characteristics of Categorical Data:
+Data values are often non-numeric but can be represented numerically (e.g., 0 for Male, 1 for Female).
