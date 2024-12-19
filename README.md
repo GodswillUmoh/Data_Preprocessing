@@ -83,7 +83,7 @@ Data values are often non-numeric but can be represented numerically (e.g., 0 fo
 + Considering the dataset above, we have three categories under country.
 + One can use One-Hot-Encoding to assign these into three columns
 + One-Hot-Encoding introducess a binary vector to each of the countries
-+ Example of binary code: say Poland is given 100, Germany 010, USA 001.
++ Example of binary code: say Poland is given __vector (1.0, 0.0, 00), Germany vector(0.0, 1.0, 0.0) USA vector (0.o, 0.0, 1.0).__
 
 ### Encoding the Independent Variable
 ```python
