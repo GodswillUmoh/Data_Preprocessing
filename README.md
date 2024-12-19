@@ -38,4 +38,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 ```
-
+```python
+# Importing the dataset
+dataset = pd.read_csv('data_c.csv')
+X = dataset.iloc[:, :-1].values
+y= dataset.iloc[:, -1].values
+print(X)
+#print(y)
+```
+> ## Notes
++ Class is like set of instructions to follow in order to build an object
++ Object is the instance of the class. The result of excecuting the instructions( class) is the object
++ Method is the tool or function used on object. Performing a particular task in objects.
