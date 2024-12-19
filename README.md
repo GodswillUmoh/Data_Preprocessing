@@ -117,6 +117,16 @@ print(y)
 
  ## Do you apply feature scaling before splitting dataset or after?
  This is regular question in machine learning. The answer is after splitting the dataset into the training and test set
- > Reason for this is because the test set is a brand new test set, applying the feature scaling before the split means the mean or standard deviation computation would have taken place on the test set which is not supposed to be. Hence, It is done after, so the test set will not be captured in the scaling
+ > Reason for this is because the test set is a brand new test set, applying the feature scaling before the split means the mean or standard deviation computation would have taken place on the test set which is not supposed to be. Hence, It is done after, so the test set will not be captured in the scaling as it is supposed to be new data with new observation. And, it can cause info leakage on the train set use for the model.
+
+### Spliting Data
+```python
+# split to train and test set
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import  LinearRegression
+from sklearn.metrics import r2_score
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=1)
+```
+ [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
 
  
