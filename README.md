@@ -118,6 +118,9 @@ print(y)
  ## Do you apply feature scaling before splitting dataset or after?
  This is regular question in machine learning. The answer is after splitting the dataset into the training and test set
  > Reason for this is because the test set is a brand new test set, applying the feature scaling before the split means the mean or standard deviation computation would have taken place on the test set which is not supposed to be. Hence, It is done after, so the test set will not be captured in the scaling as it is supposed to be new data with new observation. And, it can cause info leakage on the train set use for the model.
+>
+> Data leakage occurs when information from the test set influences the training process.
+If scaling is applied before splitting, the test data influences the scaling parameters (mean, standard deviation, min, max, etc.), leading to overly optimistic performance metrics during model evaluation.
 
 ### Spliting Data
 ```python
@@ -129,4 +132,43 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random
 ```
  [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
 
- 
+ ## Feature Scaling
+ _Why do we need to do this?_
+ > It is to avoid some data dominating in the dataset. Features with larger magnitudes can dominate over features with smaller magnitudes, leading to biased models.
+> Feature scaling is a crucial preprocessing step in machine learning, particularly for algorithms that are sensitive to the scale of the data. It ensures that all features contribute equally to the model training process, improving performance and convergence rates.
+>
+> Feature scaling ensures that all features are on a comparable scale, leading to more accurate results.
+
+ _Which method of Feature scaling should we use? Standardization or Normalization?_
+ > Choosing between standardization and normalization depends on the nature of your data and the machine learning algorithm you're using
+> _Normalization is use when you have a normal distribution in the data. It should be used When Data Has a Fixed Range._ Normalization scales all features to a range of [0, 1] or [-1, 1], which is useful when the dataset has bounded values or needs to be interpreted as percentages.
+>
+> _Standardization is used When Data Does Not Have a Defined Range._ It centers the data around a mean of 0 and a standard deviation of 1, which works well for most datasets.
+> For Features with Outliers: Standardization is more robust to outliers compared to normalization because it considers the standard deviation rather than min-max ranges.
+> __Note: Standardisation works well with different data hence, it is preferred over normalization (works well with some kind of dataset)__
+
+## Dummy Variables
+After OnHotEncoder function is applied, the binary numbers assigned to the categorical variable is known as dummy variables. 
+_Question: Should feature scaling (e.g Standardisation be applied to dummy variables?_
+> The answer is no. This is why: Feature scaling should generally not be applied to dummy variables (also known as one-hot encoded variables) because it distorts their categorical nature and the meaningful interpretation of their values.
+> 
+> _Dummy Variables Represent Categories:_
+Dummy variables represent categories using binary values (e.g., 0 or 1).
+These values are not continuous but are used to indicate the presence or absence of a specific category.
+Scaling dummy variables changes the binary representation (e.g., scaling 0 and 1 to 0.2 and 0.8), which makes no logical sense for categorical data.
+
+### Applying feature scaling
+```python
+# standardisation
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+# Excluding the index for the dummy variable
+X_train[:, 3:] = sc.fit_transform(X_train[:, 3:])
+X_test[:, 3:] = sc.transform(X_test[:, 3:])
+
+print(X_train)
+
+print(X_test)
+```
+ [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
+
