@@ -20,4 +20,22 @@ In this data preprocessing, I created a simple data. _Note: Data is created for 
 
 __As you can see, we have empty cells, two types of categorical data: country(3 categories) and Purchased(2 categories)__
 
+## Coding Outline:
++ Importing the libraries
++ Importing the dataset
++ Taking care of missing data
++ Encoding categorical data
++ Encoding the Independent Variable
++ Encoding the Dependent Variable
++ Splitting the dataset into the Training set and Test set
++ Feature Scaling
+
+## Data preprocessing codes [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
+```python
+# Importing libraries
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+```
 
