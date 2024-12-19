@@ -114,3 +114,9 @@ y = le.fit_transform(y)
 print(y)
 ```
  [To view Code results, click here](https://colab.research.google.com/drive/18MtRgTVlMMmfHGTF_d-mPG2C13YofWaa#scrollTo=TpGqbS4TqkIR)
+
+ ## Do you apply feature scaling before splitting dataset or after?
+ This is regular question in machine learning. The answer is after splitting the dataset into the training and test set
+ > Reason for this is because the test set is a brand new test set, applying the feature scaling before the split means the mean or standard deviation computation would have taken place on the test set which is not supposed to be. Hence, It is done after, so the test set will not be captured in the scaling
+
+ 
