@@ -147,7 +147,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random
 > For Features with Outliers: Standardization is more robust to outliers compared to normalization because it considers the standard deviation rather than min-max ranges.
 > __Note: Standardisation works well with different data hence, it is preferred over normalization (works well with some kind of dataset)__
 
-## In summary, What is Feature scaling?
+_In summary, What is Feature scaling?_
 > Answer: Scaling column values so that they are comparable
 
 ## Dummy Variables
